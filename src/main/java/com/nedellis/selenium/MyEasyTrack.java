@@ -58,4 +58,10 @@ public class MyEasyTrack {
         return By.xpath(link);
     }
 
+    public static By getSingleQuizAnswer(int count) {
+        String link = "//*[@value='" + count + "\']";
+
+        return By.xpath(link);
+    }
+
 }

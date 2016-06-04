@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4662326f-b418-45ef-bce5-4140066c6df5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/nedellis/selenium/MyEasyTrack.class" afterPath="$PROJECT_DIR$/target/classes/com/nedellis/selenium/MyEasyTrack.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/nedellis/selenium/RunnerTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/nedellis/selenium/RunnerTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/nedellis/selenium/MyEasyTrack.java" afterPath="$PROJECT_DIR$/src/main/java/com/nedellis/selenium/MyEasyTrack.java" />
@@ -41,13 +42,17 @@
       <file leaf-file-name="RunnerTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/nedellis/selenium/RunnerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
-              <caret line="151" column="0" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
+            <state relative-caret-position="362">
+              <caret line="443" column="0" selection-start-line="443" selection-start-column="0" selection-end-line="443" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#loginToLatestCourse#0;class#RunnerTest#0" expanded="false" />
+                <element signature="method#completeMultipleChoice#0;class#RunnerTest#0" expanded="false" />
                 <element signature="method#quizQuestionIsWrong#0;class#RunnerTest#0" expanded="false" />
                 <element signature="method#webdriverRunner#0;class#RunnerTest#0" expanded="false" />
                 <element signature="method#completeExam#0;class#RunnerTest#0" expanded="false" />
+                <element signature="docComment;method#waitTime#0;class#RunnerTest#0" expanded="false" />
+                <element signature="method#waitTime#0;class#RunnerTest#0" expanded="false" />
                 <element signature="method#examRunner#0;class#RunnerTest#0" expanded="false" />
                 <element signature="docComment;method#improveAnswers#0;class#RunnerTest#0" expanded="false" />
                 <element signature="method#improveAnswers#0;class#RunnerTest#0" expanded="false" />
@@ -94,8 +99,8 @@
       <file leaf-file-name="MyEasyTrack.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/nedellis/selenium/MyEasyTrack.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="553">
-              <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+            <state relative-caret-position="526">
+              <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -148,7 +153,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
-    <option name="width" value="1531" />
+    <option name="width" value="1520" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -176,9 +181,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -269,6 +271,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -680,38 +685,45 @@
       <option name="project" value="LOCAL" />
       <updated>1465008730393</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added support for multiple questions in quizzes">
+      <created>1465012932214</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1465012932214</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RunnerTest_webdriverRunner - 2016.06.03 at 23h 38m 19s.xml">
-      <configuration name="RunnerTest.webdriverRunner" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RunnerTest_webdriverRunner - 2016.06.03 at 23h 39m 20s.xml">
-      <configuration name="RunnerTest.webdriverRunner" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RunnerTest_webdriverRunner - 2016.06.03 at 23h 46m 16s.xml">
-      <configuration name="RunnerTest.webdriverRunner" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RunnerTest_webdriverRunner - 2016.06.03 at 23h 49m 27s.xml">
-      <configuration name="RunnerTest.webdriverRunner" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RunnerTest_webdriverRunner - 2016.06.03 at 23h 49m 33s.xml">
-      <configuration name="RunnerTest.webdriverRunner" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RunnerTest_webdriverRunner - 2016.06.03 at 23h 50m 35s.xml">
-      <configuration name="RunnerTest.webdriverRunner" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RunnerTest_webdriverRunner - 2016.06.03 at 23h 53m 05s.xml">
-      <configuration name="RunnerTest.webdriverRunner" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RunnerTest_webdriverRunner - 2016.06.03 at 23h 53m 37s.xml">
-      <configuration name="RunnerTest.webdriverRunner" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="RunnerTest_webdriverRunner - 2016.06.03 at 23h 56m 02s.xml">
       <configuration name="RunnerTest.webdriverRunner" configurationId="JUnit" />
     </history-entry>
     <history-entry file="RunnerTest_webdriverRunner - 2016.06.04 at 00h 01m 47s.xml">
+      <configuration name="RunnerTest.webdriverRunner" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RunnerTest_webdriverRunner - 2016.06.04 at 10h 00m 12s.xml">
+      <configuration name="RunnerTest.webdriverRunner" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RunnerTest_webdriverRunner - 2016.06.04 at 10h 00m 49s.xml">
+      <configuration name="RunnerTest.webdriverRunner" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RunnerTest_webdriverRunner - 2016.06.04 at 10h 01m 52s.xml">
+      <configuration name="RunnerTest.webdriverRunner" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RunnerTest_webdriverRunner - 2016.06.04 at 10h 08m 17s.xml">
+      <configuration name="RunnerTest.webdriverRunner" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RunnerTest_webdriverRunner - 2016.06.04 at 10h 09m 30s.xml">
+      <configuration name="RunnerTest.webdriverRunner" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RunnerTest_webdriverRunner - 2016.06.04 at 10h 25m 15s.xml">
+      <configuration name="RunnerTest.webdriverRunner" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RunnerTest_webdriverRunner - 2016.06.04 at 10h 27m 00s.xml">
+      <configuration name="RunnerTest.webdriverRunner" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RunnerTest_webdriverRunner - 2016.06.04 at 10h 29m 04s.xml">
       <configuration name="RunnerTest.webdriverRunner" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -725,23 +737,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1531" height="1047" extended-state="0" />
+    <frame x="-7" y="0" width="1520" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3238512" sideWeight="0.4972973" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32275712" sideWeight="0.4972973" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3238512" sideWeight="0.5027027" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25273523" sideWeight="0.4972973" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25054705" sideWeight="0.4972973" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17811012" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1780822" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -752,6 +763,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -767,11 +779,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added quite a few comments to the methods in the RunnerTest class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added quite a few comments to the methods in the RunnerTest class" />
+    <MESSAGE value="Added support for multiple questions in quizzes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added support for multiple questions in quizzes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="19" />
+      <option name="time" value="20" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -802,9 +815,13 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#loginToLatestCourse#0;class#RunnerTest#0" expanded="false" />
+            <element signature="method#completeMultipleChoice#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#quizQuestionIsWrong#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#webdriverRunner#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#completeExam#0;class#RunnerTest#0" expanded="false" />
+            <element signature="docComment;method#waitTime#0;class#RunnerTest#0" expanded="false" />
+            <element signature="method#waitTime#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#examRunner#0;class#RunnerTest#0" expanded="false" />
             <element signature="docComment;method#improveAnswers#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#improveAnswers#0;class#RunnerTest#0" expanded="false" />
@@ -873,9 +890,13 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#loginToLatestCourse#0;class#RunnerTest#0" expanded="false" />
+            <element signature="method#completeMultipleChoice#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#quizQuestionIsWrong#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#webdriverRunner#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#completeExam#0;class#RunnerTest#0" expanded="false" />
+            <element signature="docComment;method#waitTime#0;class#RunnerTest#0" expanded="false" />
+            <element signature="method#waitTime#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#examRunner#0;class#RunnerTest#0" expanded="false" />
             <element signature="docComment;method#improveAnswers#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#improveAnswers#0;class#RunnerTest#0" expanded="false" />
@@ -928,9 +949,13 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#loginToLatestCourse#0;class#RunnerTest#0" expanded="false" />
+            <element signature="method#completeMultipleChoice#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#quizQuestionIsWrong#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#webdriverRunner#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#completeExam#0;class#RunnerTest#0" expanded="false" />
+            <element signature="docComment;method#waitTime#0;class#RunnerTest#0" expanded="false" />
+            <element signature="method#waitTime#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#examRunner#0;class#RunnerTest#0" expanded="false" />
             <element signature="docComment;method#improveAnswers#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#improveAnswers#0;class#RunnerTest#0" expanded="false" />
@@ -983,9 +1008,13 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#loginToLatestCourse#0;class#RunnerTest#0" expanded="false" />
+            <element signature="method#completeMultipleChoice#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#quizQuestionIsWrong#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#webdriverRunner#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#completeExam#0;class#RunnerTest#0" expanded="false" />
+            <element signature="docComment;method#waitTime#0;class#RunnerTest#0" expanded="false" />
+            <element signature="method#waitTime#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#examRunner#0;class#RunnerTest#0" expanded="false" />
             <element signature="docComment;method#improveAnswers#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#improveAnswers#0;class#RunnerTest#0" expanded="false" />
@@ -1038,9 +1067,13 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#loginToLatestCourse#0;class#RunnerTest#0" expanded="false" />
+            <element signature="method#completeMultipleChoice#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#quizQuestionIsWrong#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#webdriverRunner#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#completeExam#0;class#RunnerTest#0" expanded="false" />
+            <element signature="docComment;method#waitTime#0;class#RunnerTest#0" expanded="false" />
+            <element signature="method#waitTime#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#examRunner#0;class#RunnerTest#0" expanded="false" />
             <element signature="docComment;method#improveAnswers#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#improveAnswers#0;class#RunnerTest#0" expanded="false" />
@@ -1093,9 +1126,13 @@
           <caret line="147" column="0" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#loginToLatestCourse#0;class#RunnerTest#0" expanded="false" />
+            <element signature="method#completeMultipleChoice#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#quizQuestionIsWrong#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#webdriverRunner#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#completeExam#0;class#RunnerTest#0" expanded="false" />
+            <element signature="docComment;method#waitTime#0;class#RunnerTest#0" expanded="false" />
+            <element signature="method#waitTime#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#examRunner#0;class#RunnerTest#0" expanded="false" />
             <element signature="docComment;method#improveAnswers#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#improveAnswers#0;class#RunnerTest#0" expanded="false" />
@@ -1148,9 +1185,13 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#loginToLatestCourse#0;class#RunnerTest#0" expanded="false" />
+            <element signature="method#completeMultipleChoice#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#quizQuestionIsWrong#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#webdriverRunner#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#completeExam#0;class#RunnerTest#0" expanded="false" />
+            <element signature="docComment;method#waitTime#0;class#RunnerTest#0" expanded="false" />
+            <element signature="method#waitTime#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#examRunner#0;class#RunnerTest#0" expanded="false" />
             <element signature="docComment;method#improveAnswers#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#improveAnswers#0;class#RunnerTest#0" expanded="false" />
@@ -1277,21 +1318,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/nedellis/selenium/MyEasyTrack.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+        <state relative-caret-position="526">
+          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/nedellis/selenium/RunnerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="151" column="0" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
+        <state relative-caret-position="362">
+          <caret line="443" column="0" selection-start-line="443" selection-start-column="0" selection-end-line="443" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#loginToLatestCourse#0;class#RunnerTest#0" expanded="false" />
+            <element signature="method#completeMultipleChoice#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#quizQuestionIsWrong#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#webdriverRunner#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#completeExam#0;class#RunnerTest#0" expanded="false" />
+            <element signature="docComment;method#waitTime#0;class#RunnerTest#0" expanded="false" />
+            <element signature="method#waitTime#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#examRunner#0;class#RunnerTest#0" expanded="false" />
             <element signature="docComment;method#improveAnswers#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#improveAnswers#0;class#RunnerTest#0" expanded="false" />
