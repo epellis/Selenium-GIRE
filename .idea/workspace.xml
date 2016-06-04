@@ -692,7 +692,14 @@
       <option name="project" value="LOCAL" />
       <updated>1465012932214</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Fixed issues where the multiple choice selector could not attempt single question quizzes and added a wait method to streamline and standardize wait commands.">
+      <created>1465051175535</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1465051175535</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -780,7 +787,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added quite a few comments to the methods in the RunnerTest class" />
     <MESSAGE value="Added support for multiple questions in quizzes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added support for multiple questions in quizzes" />
+    <MESSAGE value="Fixed issues where the multiple choice selector could not attempt single question quizzes and added a wait method to streamline and standardize wait commands." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed issues where the multiple choice selector could not attempt single question quizzes and added a wait method to streamline and standardize wait commands." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
