@@ -9,6 +9,7 @@ public class MyEasyTrack {
     public static final By LOC_LNK_GONEXT = By.xpath("//*[@class='footer-hook']/div/div/div/img[2]");
     public static final By LOC_LNK_CHECKANSWER = By.xpath("//*[@type='submit']");
     public static final By LOC_LNK_TRYAGAIN = By.xpath("//*[@id='activity']/div[2]/a");
+    public static final By LOC_LNK_TRYHEREAGAIN = By.partialLinkText("Click here to try again");
     public static final By LOC_LNK_BEGINEXAM = By.xpath("//*[@class='slide-content']/p[7]/input");
     public static final By LOC_LNK_NEXTEXAM = By.xpath("//*[@name='next']");
     public static final By LOC_LNK_EXAMSUBMIT = By.xpath("//*[@name='manualSubmit']");
@@ -43,6 +44,18 @@ public class MyEasyTrack {
         examLink = "//*[@class='activity-answers']/li[" + count + "]/input";
 
         return By.xpath(examLink);
+    }
+
+    public static By getQuizOptionLink(int index, int count) {
+        String link = "(//*[@name='a" + index + "\'])[" + count + "]";
+
+        return By.xpath(link);
+    }
+
+    public static By getCorrectAnswerText(int index) {
+        String link = "//*[@class='data-table']/tbody/tr[" + index + "]/td/div/font";
+
+        return By.xpath(link);
     }
 
 }

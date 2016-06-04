@@ -30,6 +30,9 @@ import java.util.Set;
 
 public class RunnerTest extends Locomotive {
 
+    /* Integer with the score that will allow the while loop to complete and the method completeExam to terminate */
+    private static final int scoreThreshold = 70;
+
     private void loginToLatestCourse() {
 
         // ToDo: Close the overview window when focus is shifted to the child window
@@ -59,7 +62,7 @@ public class RunnerTest extends Locomotive {
         System.out.println(driver.getWindowHandle());
 
         try {
-            Thread.sleep(5000);                 //1000 milliseconds is one second.
+            Thread.sleep(2000);                 //1000 milliseconds is one second.
         } catch (InterruptedException ex) {
             Thread.currentThread().interrupt();
         }
@@ -73,7 +76,6 @@ public class RunnerTest extends Locomotive {
             }
         }
 
-//        System.out.println(Arrays.toString(handles.toArray()));
 
         System.out.print("Currently on window: ");
         System.out.println(driver.getWindowHandle());
@@ -81,24 +83,90 @@ public class RunnerTest extends Locomotive {
         /* Wait a maxiumum of 10 seconds for the page to load */
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 
-        /* Open the latest assignment page */
-//        if (isPresent(MyEasyTrack.LOC_LNK_LATESTCOURSE)) {
-//            click(MyEasyTrack.LOC_LNK_LATESTCOURSE);
-//        }
 
         /* Wait a maxiumum of 10 seconds for the page to load */
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 
-//        /* Wait a maxiumum of 10 seconds for the page to load */
-//        driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-
         System.out.println();
 
-//        try {
-//            Thread.sleep(60000);                 //1000 milliseconds is one second.
-//        } catch (InterruptedException ex) {
-//            Thread.currentThread().interrupt();
-//        }
+    }
+
+    private void completeMultipleChoice() {
+        /* Array with quiz answers */
+        int[] quizAnswers = {1, 1, 1, 1};
+
+        System.out.println("Attempting to answer multiple choice question...");
+        System.out.println();
+
+        /* Wait a maxiumum of 10 seconds for the page to load */
+        driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+
+        try {
+            Thread.sleep(2000);                 //1000 milliseconds is one second.
+        } catch (InterruptedException ex) {
+            Thread.currentThread().interrupt();
+        }
+
+        validatePresent(MyEasyTrack.getQuizOptionLink(1, 1));
+
+        while (isPresent(MyEasyTrack.getQuizOptionLink(1, 1))) {
+
+            /* Iterate through each answer to fill it in */
+            for (int i = 1; i <= quizAnswers.length; i++) {
+
+                /* If the answer exists, click it */
+                if (isPresent(MyEasyTrack.getQuizOptionLink(i, quizAnswers[i - 1]))) {
+                    click(MyEasyTrack.getQuizOptionLink(i, quizAnswers[i - 1]));
+                }
+
+            }
+
+            click(MyEasyTrack.LOC_LNK_CHECKANSWER);
+
+            try {
+                Thread.sleep(2000);                 //1000 milliseconds is one second.
+            } catch (InterruptedException ex) {
+                Thread.currentThread().interrupt();
+            }
+
+            if (isPresent(MyEasyTrack.LOC_LNK_TRYAGAIN) || isPresent(MyEasyTrack.LOC_LNK_TRYHEREAGAIN)) {
+
+                System.out.println("Quiz not passed, retrying...");
+
+                /* Iterate through all of the answers */
+                for (int i = 1; i <= quizAnswers.length; i++) {
+
+                    System.out.println("Improving question: " + i);
+
+                    if (quizQuestionIsWrong(i)) {
+                        quizAnswers[i - 1]++;
+                    }
+                }
+
+                /* Try the quiz again */
+                click(MyEasyTrack.LOC_LNK_TRYHEREAGAIN);
+
+            } else {
+                System.out.println();
+            }
+
+        }
+
+    }
+
+    private boolean quizQuestionIsWrong(int index) {
+        By feedbackLink = MyEasyTrack.getCorrectAnswerText(index);
+
+        if (isPresent(feedbackLink)) {
+
+            String feedback = getText(feedbackLink);
+
+            feedback = feedback.substring(0, 14);
+
+            System.out.println(feedback);
+
+            return feedback.equals("Correct Answer");
+        } else return false;
     }
 
     @Test
@@ -106,10 +174,10 @@ public class RunnerTest extends Locomotive {
 
         loginToLatestCourse();
 
-        int examCount = 1;
+        int examCount = 2;
 
         try {
-            Thread.sleep(5000);                 //1000 milliseconds is one second.
+            Thread.sleep(2000);                 //1000 milliseconds is one second.
         } catch (InterruptedException ex) {
             Thread.currentThread().interrupt();
         }
@@ -145,29 +213,7 @@ public class RunnerTest extends Locomotive {
 
             /* Contingency plan for multiple choice */
             if (isPresent(MyEasyTrack.LOC_CLK_FIRSTOPTION)) {
-                int answerIndex = 1;
-
-                System.out.println("Attempting to answer multiple choice question...");
-                System.out.println();
-
-                while ((isPresent(By.xpath(MyEasyTrack.LOC_CLK_OPTIONXPATH + answerIndex + "\']"))) && answerIndex <= 10) {
-
-                    System.out.println("Attempting option: " + answerIndex);
-                    click(By.xpath(MyEasyTrack.LOC_CLK_OPTIONXPATH + answerIndex + "\']"));
-                    click(MyEasyTrack.LOC_LNK_CHECKANSWER);
-
-                    /* Wait a maxiumum of 10 seconds for the page to load */
-                    driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-
-                    if (isPresent(MyEasyTrack.LOC_LNK_TRYAGAIN)) {
-                        answerIndex++;
-                        click(MyEasyTrack.LOC_LNK_TRYAGAIN);
-                    } else {
-                        System.out.println("Answer correct, continuing...");
-                    }
-
-                }
-
+                completeMultipleChoice();
             }
 
             /* Wait for 3500 +/- 5000 milliseconds (5 Seconds) */
@@ -244,7 +290,7 @@ public class RunnerTest extends Locomotive {
                     /* Wait a maxiumum of 10 seconds for the page to load */
                 driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 
-                if (getPercentage(MyEasyTrack.LOC_TXT_EXAMPERCENTAGE) >= 70) {
+                if (getPercentage(MyEasyTrack.LOC_TXT_EXAMPERCENTAGE) >= scoreThreshold) {
                     System.out.println("Exam sucessfully completed");
 
                         /* Continue the course */
