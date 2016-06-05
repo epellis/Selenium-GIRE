@@ -34,7 +34,7 @@ public class RunnerTest extends Locomotive {
     private static final int scoreThreshold = 70;
 
     /* Integer with the base waiting time in seconds */
-    private static final int baseWait = 70;
+    private static final int baseWait = 50;
 
     private void loginToLatestCourse() {
 
@@ -51,8 +51,9 @@ public class RunnerTest extends Locomotive {
         System.out.println("Currently on window: ");
         System.out.println(driver.getWindowHandle());
 
+        click(Account.LOC_LNK_STARTEDCOURSES);
+
         /* Open the first unfinished course */
-        System.out.println(isPresent(Account.LOC_LNK_OPENCOURSE));
         click(Account.LOC_LNK_OPENCOURSE);
 
         /* Wait a maxiumum of 10 seconds for the page to load */
@@ -69,6 +70,7 @@ public class RunnerTest extends Locomotive {
         Set<String> handles = driver.getWindowHandles();
         for (String windowHandle : handles) {
             if (!windowHandle.equals(parentWindow)) {
+                driver.close();
                 driver.switchTo().window(windowHandle);
             }
         }
@@ -85,7 +87,7 @@ public class RunnerTest extends Locomotive {
 
     private void completeMultipleChoice() {
         /* Array with quiz answers */
-        int[] quizAnswers = {1, 1, 1, 1, 1};
+        int[] quizAnswers = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
 
         System.out.println("Attempting to answer multiple choice question...");
         System.out.println();
@@ -93,10 +95,102 @@ public class RunnerTest extends Locomotive {
         /* Wait a maxiumum of 10 seconds for the page to load */
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 
-        waitTime(2);
+        /* If statement for dealing with dropdown menus */
+        if (isPresent(MyEasyTrack.getSelect(1))) {
+
+            System.out.println("Dropdown type found");
+
+            /* While loop to run continuously as long as the question is still present */
+            while (isPresent(MyEasyTrack.getSelect(1))) {
+
+                /* For loop to iterate through each question */
+                for (int i = 1; i <= quizAnswers.length; i++) {
+
+                    /* Will only do logic if a question is detected */
+                    if (isPresent(MyEasyTrack.getSelect(i))) {
+
+                        /* Check to see if the question has already been created */
+                        if (SelectBank.alreadyCreated(i)) {
+
+                            System.out.println("Looks like this question has been found");
+
+                            /* Make an object of the one already found */
+                            selectQuestion question = SelectBank.getSelectQuestion(i);
+
+                            int index = 1;
+                            boolean hasNotFound = true;
+
+                            /* Make a new string with the text found in the by data type */
+                            String text = getText(MyEasyTrack.getDropdownMenu(i, index));
+
+                            /* While all answers are already known, continue to iterate */
+                            while (hasNotFound && index <= 10) {
+
+                                /* Determing if this text has already occurred */
+                                if (question.containsString(text)) {
+                                    index++;
+                                } else hasNotFound = false;
+
+                            }
+
+                            if (index > 10) {
+                                System.out.println("Something went wrong");
+                            }
+
+                            /* Select the answer based on the text found */
+                            selectOptionByText(MyEasyTrack.getSelect(i), text);
+
+                        }
+
+                        /* Otherwise create a new object */
+                        else {
+
+                            /* Make an empty selectquestion */
+                            selectQuestion question = new selectQuestion(i, "");
+
+                            /* Add it to the selectbank collection */
+                            SelectBank.addSelect(question);
+
+                            /* Go ahead and select the default answer */
+                            selectOptionByText(MyEasyTrack.getSelect(i), "");
+
+                        }
+
+                    }
+
+                }
+
+                waitTime(2);
+
+                System.out.println("Checking answers...");
+                click(MyEasyTrack.LOC_LNK_CHECKANSWER);
+
+                if (isPresent(MyEasyTrack.LOC_LNK_DROPDOWNTRYAGAIN)) {
+                    System.out.println("Quiz failed, retrying by checking answers...");
+
+                    for (int i = 1; i <= quizAnswers.length; i++) {
+                        if (dropdownQuestionIsWrong(i)) {
+                            System.out.println("Detected that question " + i + " is wrong, changing...");
+
+                            waitTime(1);
+
+                            String text = getText(MyEasyTrack.getDropdownMenu(i, 1));
+
+                            SelectBank.selectBank.get(i).addSelectAnswer(text);
+                        }
+                    }
+
+                    System.out.println("Clicking try again...");
+                    click(MyEasyTrack.LOC_LNK_DROPDOWNTRYAGAIN);
+                }
+            }
+        }
 
         /* If statement for "binary style" multiple choice */
-        if (isPresent(MyEasyTrack.getQuizOptionLink(1, 1))) {
+        else if (isPresent(MyEasyTrack.getQuizOptionLink(1, 1))) {
+
+            System.out.println("Binary type detected");
+
             while (isPresent(MyEasyTrack.getQuizOptionLink(1, 1))) {
 
             /* Iterate through each answer to fill it in */
@@ -104,6 +198,7 @@ public class RunnerTest extends Locomotive {
 
                 /* If the answer exists, click it */
                     if (isPresent(MyEasyTrack.getQuizOptionLink(i, quizAnswers[i - 1]))) {
+                        validatePresent(MyEasyTrack.getQuizOptionLink(i, quizAnswers[i - 1]));
                         click(MyEasyTrack.getQuizOptionLink(i, quizAnswers[i - 1]));
                     }
 
@@ -140,6 +235,8 @@ public class RunnerTest extends Locomotive {
         /* If statement for single question multiple choice */
         else if (isPresent(MyEasyTrack.LOC_CLK_FIRSTOPTION)) {
 
+                System.out.println("Single question type detected");
+
             /* Loop until the quiz is passed */
             while (isPresent(MyEasyTrack.LOC_CLK_FIRSTOPTION)) {
 
@@ -166,6 +263,12 @@ public class RunnerTest extends Locomotive {
             }
         }
 
+        System.out.println(isPresent(MyEasyTrack.getDropdownMenu(1, 1)));
+
+    }
+
+    private boolean dropdownQuestionIsWrong(int index) {
+        return isPresent(MyEasyTrack.getDropdownCorrect(index));
     }
 
     private boolean quizQuestionIsWrong(int index) {
@@ -186,7 +289,7 @@ public class RunnerTest extends Locomotive {
 
         loginToLatestCourse();
 
-        int examCount = 2;
+        int examCount = 1;
 
         waitTime(2);
 
@@ -194,6 +297,11 @@ public class RunnerTest extends Locomotive {
         while (isPresent(MyEasyTrack.LOC_LNK_GONEXT) || isPresent(MyEasyTrack.LOC_LNK_LATESTCOURSE) || isPresent(MyEasyTrack.getExamLink(examCount))) {
 
             waitTime(2);
+
+            /* Contingency plan for multiple choice */
+            if (isPresent(MyEasyTrack.LOC_LNK_CHECKANSWER) && !isPresent(MyEasyTrack.LOC_LNK_BEGINEXAM)) {
+                completeMultipleChoice();
+            }
 
             /* Contingency plan for a reading exam */
             if (isPresent((MyEasyTrack.getExamLink(examCount)))) {
@@ -205,11 +313,6 @@ public class RunnerTest extends Locomotive {
             /* In case the starting page is not a course, click the latest link */
             if (isPresent(MyEasyTrack.LOC_LNK_LATESTCOURSE)) {
                 click(MyEasyTrack.LOC_LNK_LATESTCOURSE);
-            }
-
-            /* Contingency plan for multiple choice */
-            if (isPresent(MyEasyTrack.LOC_CLK_FIRSTOPTION)) {
-                completeMultipleChoice();
             }
 
             /* Randomly generate a number between 0 and 30000 */

@@ -10,12 +10,13 @@ public class MyEasyTrack {
     public static final By LOC_LNK_CHECKANSWER = By.xpath("//*[@type='submit']");
     public static final By LOC_LNK_TRYAGAIN = By.xpath("//*[@id='activity']/div[2]/a");
     public static final By LOC_LNK_TRYHEREAGAIN = By.partialLinkText("Click here to try again");
-    public static final By LOC_LNK_BEGINEXAM = By.xpath("//*[@class='slide-content']/p[7]/input");
     public static final By LOC_LNK_NEXTEXAM = By.xpath("//*[@name='next']");
     public static final By LOC_LNK_EXAMSUBMIT = By.xpath("//*[@name='manualSubmit']");
     public static final By LOC_LNK_CONTINUECOURSE = By.xpath("//*[@value='Continue Course']");
     public static final By LOC_LNK_RETRYEXAM = By.xpath("//*[@class='slide-content']/p[4]/input[1]");
     public static final By LOC_LNK_RETAKEFINALEXAM = By.xpath("//*[@class='slide-content']/p[3]/input[1]");
+    public static final By LOC_LNK_DROPDOWNTRYAGAIN = By.partialLinkText("Click here to try again");
+    public static final By LOC_LNK_BEGINEXAM = By.xpath("//*[@value='Begin Exam']");
 
     // Buttons
     public static final By LOC_CLK_FIRSTOPTION = By.xpath("//*[@value='1']");
@@ -60,6 +61,24 @@ public class MyEasyTrack {
 
     public static By getSingleQuizAnswer(int count) {
         String link = "//*[@value='" + count + "\']";
+
+        return By.xpath(link);
+    }
+
+    public static By getDropdownMenu(int index, int count) {
+        String link = "//*[@class='data-table']/tbody/tr[" + index + "]/td[2]/select/option[" + (count + 1) + "]";
+
+        return By.xpath(link);
+    }
+
+    public static By getSelect(int index) {
+        String link = "//*[@class='data-table']/tbody/tr[" + index + "]/td[2]/select";
+
+        return By.xpath(link);
+    }
+
+    public static By getDropdownCorrect(int index) {
+        String link = "//*[@class='data-table']/tbody/tr[" + index + "]/td[2]/font";
 
         return By.xpath(link);
     }
