@@ -39,10 +39,10 @@ public class ExamBank {
         return -1;
     }
 
-    public static void changeAnswer(int index) {
+    public static void changeAnswer(int index, int count) {
 
         if (index >= 0) {
-            QuestionBank.get(index).changeAnswer();
+            QuestionBank.get(index).changeAnswerToCount(count);
         } else {
             System.out.println("Index is not valid!!!");
         }

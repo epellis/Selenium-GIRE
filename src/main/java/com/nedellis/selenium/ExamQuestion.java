@@ -7,13 +7,13 @@ public class ExamQuestion extends ExamBank {
     private int answer;
 
     public ExamQuestion(String quest, int ans) {
-        question = quest;
+        question = quest.trim();
         answer = ans;
     }
 
     public ExamQuestion(String quest) {
-        question = quest;
-        answer = 1; // Defaults to an answer index of one.
+        question = quest.trim();
+        answer = (int)(Math.random() * 4) + 1; // Randomize between 1 and 4
     }
 
     public String getQuestion() {
@@ -24,7 +24,7 @@ public class ExamQuestion extends ExamBank {
         return answer;
     }
 
-    public void changeAnswer() {
-        answer++;
+    public void changeAnswerToCount(int count) {
+        answer = count;
     }
 }

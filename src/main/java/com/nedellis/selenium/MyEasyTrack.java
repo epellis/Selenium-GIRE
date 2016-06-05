@@ -11,7 +11,7 @@ public class MyEasyTrack {
     public static final By LOC_LNK_TRYAGAIN = By.xpath("//*[@id='activity']/div[2]/a");
     public static final By LOC_LNK_TRYHEREAGAIN = By.partialLinkText("Click here to try again");
     public static final By LOC_LNK_NEXTEXAM = By.xpath("//*[@name='next']");
-    public static final By LOC_LNK_EXAMSUBMIT = By.xpath("//*[@name='manualSubmit']");
+    public static final By LOC_LNK_EXAMSUBMIT = By.xpath("//*[@name='manualSubmit'][1]");
     public static final By LOC_LNK_CONTINUECOURSE = By.xpath("//*[@value='Continue Course']");
     public static final By LOC_LNK_RETRYEXAM = By.xpath("//*[@class='slide-content']/p[4]/input[1]");
     public static final By LOC_LNK_RETAKEFINALEXAM = By.xpath("//*[@class='slide-content']/p[3]/input[1]");
@@ -28,8 +28,8 @@ public class MyEasyTrack {
 
     // Text
     public static final By LOC_TXT_COMPLETE = By.xpath("//*[@class='footer-hook']/div/div/div/div");
-    public static final By LOC_TXT_EXAMQUESTION = By.xpath("//*[@class='activity-question']");
-    public static final By LOC_TEXT_EXAMNUMBER = By.xpath("//*[@class='slide-content']/p[2]/font/strong");
+    public static final By LOC_TXT_EXAMQUESTION = By.xpath("//*[@class='activity-question'][1]");
+    public static final By LOC_TEXT_EXAMNUMBER = By.xpath("//*[@class='slide-content']/p[2]/font/strong[1]");
     public static final By LOC_TXT_EXAMPERCENTAGE = By.xpath("//*[@class='col eight-col']/div/h2");
     public static final By LOC_TXT_WRONGANSWER = By.xpath("//*[@src='/images/slide_content/incorrect.png']");
     public static final By LOC_TXT_RIGHTANSWER = By.xpath("//*[@src='/images/slide_content/correct.png']");
@@ -40,9 +40,7 @@ public class MyEasyTrack {
     }
 
     public static By getExamOptionLink(int count){
-        String examLink;
-
-        examLink = "//*[@class='activity-answers']/li[" + count + "]/input";
+        String examLink = "//*[@class='activity-answers']/li[" + count + "]/input";
 
         return By.xpath(examLink);
     }
@@ -79,6 +77,12 @@ public class MyEasyTrack {
 
     public static By getDropdownCorrect(int index) {
         String link = "//*[@class='data-table']/tbody/tr[" + index + "]/td[2]/font";
+
+        return By.xpath(link);
+    }
+
+    public static By getCorrectAnswerResponse(int index, int count) {
+        String link = "//*[@id='content']/ul[" + index + "]/li[" + count + "]/font[2]";
 
         return By.xpath(link);
     }

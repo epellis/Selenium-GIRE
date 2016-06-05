@@ -51,7 +51,7 @@ public class RunnerTest extends Locomotive {
         System.out.println("Currently on window: ");
         System.out.println(driver.getWindowHandle());
 
-        click(Account.LOC_LNK_STARTEDCOURSES);
+//        click(Account.LOC_LNK_STARTEDCOURSES);
 
         /* Open the first unfinished course */
         click(Account.LOC_LNK_OPENCOURSE);
@@ -289,7 +289,7 @@ public class RunnerTest extends Locomotive {
 
         loginToLatestCourse();
 
-        int examCount = 1;
+        int examCount = 2;
 
         waitTime(2);
 
@@ -332,15 +332,19 @@ public class RunnerTest extends Locomotive {
 
     private void completeExam() {
 
-            /* Index for question */
+        /* Index for question */
         int questionIndex = 1;
 
-            /* Amount of questions in this exam */
+        /* Amount of questions in this exam */
         int maxQuestions = getNumberOfQuestions(MyEasyTrack.LOC_TEXT_EXAMNUMBER);
         System.out.println("This quiz has " + maxQuestions + " questions(s)");
 
-            /* Click on the first exam button */
+        /* Click on the first exam button */
         click(MyEasyTrack.LOC_LNK_BEGINEXAM);
+
+        waitTime(5);
+
+        validatePresent(MyEasyTrack.getExamOptionLink(1));
 
         while (isPresent(MyEasyTrack.getExamOptionLink(1))) {
 
@@ -359,20 +363,17 @@ public class RunnerTest extends Locomotive {
                 System.out.println("Question is: " + newQuestion.getQuestion());
                 newQuestion.addQuestion(newQuestion);
             }
-                /* Otherwise get the question from the database */
+
+            /* Otherwise get the question from the database */
             else {
                 System.out.println("Question found, grabbing value...");
                 newQuestion = newQuestion.getSimilar(newQuestion.getQuestion().trim());
             }
 
-                /* Click on the best available option */
+            /* Click on the best available option */
             click(MyEasyTrack.getExamOptionLink(newQuestion.getAnswer()));
 
-            try {
-                Thread.sleep(5000);                 //1000 milliseconds is one second.
-            } catch (InterruptedException ex) {
-                Thread.currentThread().interrupt();
-            }
+            waitTime(5);
 
             questionIndex++;
 
@@ -413,6 +414,8 @@ public class RunnerTest extends Locomotive {
                         /* Click on the first exam button */
                     click(MyEasyTrack.LOC_LNK_BEGINEXAM);
 
+                    waitTime(2);
+
                 }
 
             } else {
@@ -449,7 +452,7 @@ public class RunnerTest extends Locomotive {
         loginToLatestCourse();
 
         /* Integer to notate which exam is being taken */
-        int examIndex = 1;
+        int examIndex = 4;
 
         try {
             Thread.sleep(5000);                 //1000 milliseconds is one second.
@@ -491,19 +494,23 @@ public class RunnerTest extends Locomotive {
                 if (answerIsWrong(i, count)) {
 
                     /* Grab the question from method getQuestionText by sending the index of the question to look up and retrieve */
-                    String quest = getQuestionText(i);
+                    String quest = getQuestionText(i).trim();
 
                     /* Send the text to the exambank class method getquestionindex to retrieve the correct object index with this question */
                     int indexToChange = ExamBank.getQuestionIndex(quest);
 
+                    /* Search the answers to find the correct count of the answer */
+                    int correctAnswer = getRightCount(i);
+
                     /* Debugging yo */
                     System.out.println("Changing question # " + indexToChange);
 
-                    /* Change the question to the next possible index */
-                    ExamBank.changeAnswer(indexToChange);
+                    /* Change the question to the correct answer */
+                    ExamBank.changeAnswer(indexToChange, correctAnswer);
 
                     /* Exit the while loop because the work here is done */
                     hasNotChanged = false;
+
                 }
 
                 /* After the if statement is finished, increase the count by 1. */
@@ -511,7 +518,7 @@ public class RunnerTest extends Locomotive {
             }
 
             /* If the count goes over the maximum amount of answers is, print this out for future debugging */
-            if (count > 4) {
+            if (count > 4 && hasNotChanged) {
                 System.out.println("Couldn't find the answer because the count was too high, check your code... ");
             }
 
@@ -586,6 +593,35 @@ public class RunnerTest extends Locomotive {
 
         /* Otherwise, return false, if the if loop was never taken */
         else return false;
+    }
+
+    /**
+     * Method that returns the count of the right answer
+     * @param index is the index of the question
+     * @return an int with the count of the correct answer
+     */
+    private int getRightCount(int index) {
+
+        /* Iterate through each answer */
+        for (int i = 1; i <= 4; i++) {
+
+            if (isPresent(MyEasyTrack.getCorrectAnswerResponse(index, i))) {
+
+                /* Create a new String with the text */
+                String response = getText(MyEasyTrack.getCorrectAnswerResponse(index, i)).trim();
+
+                /* Return the count if it exists */
+                if (response.equals("This is the correct answer")) {
+                    return i;
+                }
+
+            }
+
+        }
+
+        System.out.println("Something went wrong!!!");
+        return -1;
+
     }
 
     /**
