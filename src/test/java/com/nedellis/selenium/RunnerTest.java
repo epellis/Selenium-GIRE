@@ -31,10 +31,10 @@ import java.util.Set;
 public class RunnerTest extends Locomotive {
 
     /* Integer with the score that will allow the while loop to complete and the method completeExam to terminate */
-    private static final int scoreThreshold = 70;
+    private static final int scoreThreshold = 80;
 
     /* Integer with the base waiting time in seconds */
-    private static final int baseWait = 60;
+    private static final int baseWait = 70;
 
     private static int examCount = 1;
 
@@ -102,90 +102,96 @@ public class RunnerTest extends Locomotive {
 
             System.out.println("Dropdown type found");
 
-            /* While loop to run continuously as long as the question is still present */
-            while (isPresent(MyEasyTrack.getSelect(1))) {
+            /* Sneaky and terrible workaround because the dropdown dosent work yet. */
 
-                /* For loop to iterate through each question */
-                for (int i = 1; i <= quizAnswers.length; i++) {
+            click(MyEasyTrack.LOC_LNK_GONEXT);
 
-                    /* Will only do logic if a question is detected */
-                    if (isPresent(MyEasyTrack.getSelect(i))) {
-
-                        /* Check to see if the question has already been created */
-                        if (SelectBank.alreadyCreated(i)) {
-
-                            System.out.println("Looks like this question has been found");
-
-                            /* Make an object of the one already found */
-                            selectQuestion question = SelectBank.getSelectQuestion(i);
-
-                            int index = 1;
-                            boolean hasNotFound = true;
-
-                            /* Make a new string with the text found in the by data type */
-                            String text = getText(MyEasyTrack.getDropdownMenu(i, index));
-
-                            /* While all answers are already known, continue to iterate */
-                            while (hasNotFound && index <= 10) {
-
-                                /* Determing if this text has already occurred */
-                                if (question.containsString(text)) {
-                                    index++;
-                                } else hasNotFound = false;
-
-                            }
-
-                            if (index > 10) {
-                                System.out.println("Something went wrong");
-                            }
-
-                            /* Select the answer based on the text found */
-                            selectOptionByText(MyEasyTrack.getSelect(i), text);
-
-                        }
-
-                        /* Otherwise create a new object */
-                        else {
-
-                            /* Make an empty selectquestion */
-                            selectQuestion question = new selectQuestion(i, "");
-
-                            /* Add it to the selectbank collection */
-                            SelectBank.addSelect(question);
-
-                            /* Go ahead and select the default answer */
-                            selectOptionByText(MyEasyTrack.getSelect(i), "");
-
-                        }
-
-                    }
-
-                }
-
-                waitTime(2);
-
-                System.out.println("Checking answers...");
-                click(MyEasyTrack.LOC_LNK_CHECKANSWER);
-
-                if (isPresent(MyEasyTrack.LOC_LNK_DROPDOWNTRYAGAIN)) {
-                    System.out.println("Quiz failed, retrying by checking answers...");
-
-                    for (int i = 1; i <= quizAnswers.length; i++) {
-                        if (dropdownQuestionIsWrong(i)) {
-                            System.out.println("Detected that question " + i + " is wrong, changing...");
-
-                            waitTime(1);
-
-                            String text = getText(MyEasyTrack.getDropdownMenu(i, 1));
-
-                            SelectBank.selectBank.get(i).addSelectAnswer(text);
-                        }
-                    }
-
-                    System.out.println("Clicking try again...");
-                    click(MyEasyTrack.LOC_LNK_DROPDOWNTRYAGAIN);
-                }
-            }
+//
+//
+//            /* While loop to run continuously as long as the question is still present */
+//            while (isPresent(MyEasyTrack.getSelect(1))) {
+//
+//                /* For loop to iterate through each question */
+//                for (int i = 1; i <= quizAnswers.length; i++) {
+//
+//                    /* Will only do logic if a question is detected */
+//                    if (isPresent(MyEasyTrack.getSelect(i))) {
+//
+//                        /* Check to see if the question has already been created */
+//                        if (SelectBank.alreadyCreated(i)) {
+//
+//                            System.out.println("Looks like this question has been found");
+//
+//                            /* Make an object of the one already found */
+//                            selectQuestion question = SelectBank.getSelectQuestion(i);
+//
+//                            int index = 1;
+//                            boolean hasNotFound = true;
+//
+//                            /* Make a new string with the text found in the by data type */
+//                            String text = getText(MyEasyTrack.getDropdownMenu(i, index));
+//
+//                            /* While all answers are already known, continue to iterate */
+//                            while (hasNotFound && index <= 10) {
+//
+//                                /* Determing if this text has already occurred */
+//                                if (question.containsString(text)) {
+//                                    index++;
+//                                } else hasNotFound = false;
+//
+//                            }
+//
+//                            if (index > 10) {
+//                                System.out.println("Something went wrong");
+//                            }
+//
+//                            /* Select the answer based on the text found */
+//                            selectOptionByText(MyEasyTrack.getSelect(i), text);
+//
+//                        }
+//
+//                        /* Otherwise create a new object */
+//                        else {
+//
+//                            /* Make an empty selectquestion */
+//                            selectQuestion question = new selectQuestion(i, "");
+//
+//                            /* Add it to the selectbank collection */
+//                            SelectBank.addSelect(question);
+//
+//                            /* Go ahead and select the default answer */
+//                            selectOptionByText(MyEasyTrack.getSelect(i), "");
+//
+//                        }
+//
+//                    }
+//
+//                }
+//
+//                waitTime(2);
+//
+//                System.out.println("Checking answers...");
+//                click(MyEasyTrack.LOC_LNK_CHECKANSWER);
+//
+//                if (isPresent(MyEasyTrack.LOC_LNK_DROPDOWNTRYAGAIN)) {
+//                    System.out.println("Quiz failed, retrying by checking answers...");
+//
+//                    for (int i = 1; i <= quizAnswers.length; i++) {
+//                        if (dropdownQuestionIsWrong(i)) {
+//                            System.out.println("Detected that question " + i + " is wrong, changing...");
+//
+//                            waitTime(1);
+//
+//                            String text = getText(MyEasyTrack.getDropdownMenu(i, 1));
+//
+//                            SelectBank.selectBank.get(i).addSelectAnswer(text);
+//                        }
+//                    }
+//
+//                    System.out.println("Clicking try again...");
+//                    click(MyEasyTrack.LOC_LNK_DROPDOWNTRYAGAIN);
+//                }
+//            }
         }
 
         /* If statement for "binary style" multiple choice */
@@ -269,9 +275,9 @@ public class RunnerTest extends Locomotive {
 
     }
 
-    private boolean dropdownQuestionIsWrong(int index) {
-        return isPresent(MyEasyTrack.getDropdownCorrect(index));
-    }
+//    private boolean dropdownQuestionIsWrong(int index) {
+//        return isPresent(MyEasyTrack.getDropdownCorrect(index));
+//    }
 
     private boolean quizQuestionIsWrong(int index) {
         By feedbackLink = MyEasyTrack.getCorrectAnswerText(index);

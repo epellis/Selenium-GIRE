@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4662326f-b418-45ef-bce5-4140066c6df5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/nedellis/selenium/ExamBank.class" afterPath="$PROJECT_DIR$/target/classes/com/nedellis/selenium/ExamBank.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/nedellis/selenium/ExamQuestion.class" afterPath="$PROJECT_DIR$/target/classes/com/nedellis/selenium/ExamQuestion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/nedellis/selenium/MyEasyTrack.class" afterPath="$PROJECT_DIR$/target/classes/com/nedellis/selenium/MyEasyTrack.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/nedellis/selenium/RunnerTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/nedellis/selenium/RunnerTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/nedellis/selenium/RunnerTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/nedellis/selenium/RunnerTest.java" />
@@ -43,23 +40,21 @@
       <file leaf-file-name="RunnerTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/nedellis/selenium/RunnerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="38" column="36" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
+            <state relative-caret-position="355">
+              <caret line="296" column="0" selection-start-line="296" selection-start-column="0" selection-end-line="296" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#loginToLatestCourse#0;class#RunnerTest#0" expanded="false" />
-                <element signature="method#completeMultipleChoice#0;class#RunnerTest#0" expanded="false" />
                 <element signature="method#quizQuestionIsWrong#0;class#RunnerTest#0" expanded="false" />
-                <element signature="method#webdriverRunner#0;class#RunnerTest#0" expanded="false" />
                 <element signature="method#completeExam#0;class#RunnerTest#0" expanded="false" />
                 <element signature="docComment;method#waitTime#0;class#RunnerTest#0" expanded="false" />
                 <element signature="method#waitTime#0;class#RunnerTest#0" expanded="false" />
                 <element signature="method#examRunner#0;class#RunnerTest#0" expanded="false" />
                 <element signature="docComment;method#improveAnswers#0;class#RunnerTest#0" expanded="false" />
+                <element signature="method#improveAnswers#0;class#RunnerTest#0" expanded="false" />
                 <element signature="docComment;method#getPercentage#0;class#RunnerTest#0" expanded="false" />
                 <element signature="method#getPercentage#0;class#RunnerTest#0" expanded="false" />
                 <element signature="docComment;method#getNumberOfQuestions#0;class#RunnerTest#0" expanded="false" />
-                <element signature="method#getNumberOfQuestions#0;class#RunnerTest#0" expanded="false" />
                 <element signature="method#answerIsWrong#0;class#RunnerTest#0" expanded="false" />
                 <element signature="docComment;method#getRightCount#0;class#RunnerTest#0" expanded="false" />
                 <element signature="method#getRightCount#0;class#RunnerTest#0" expanded="false" />
@@ -73,12 +68,11 @@
       <file leaf-file-name="selectQuestion.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/nedellis/selenium/selectQuestion.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
+            <state relative-caret-position="289">
               <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
               <folding>
-                <element signature="e#165#173#0" expanded="true" />
-                <element signature="e#416#417#0" expanded="true" />
-                <element signature="e#460#461#0" expanded="true" />
+                <element signature="e#227#228#0" expanded="false" />
+                <element signature="e#252#253#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -90,7 +84,14 @@
             <state relative-caret-position="119">
               <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding>
-                <element signature="e#151#167#0" expanded="true" />
+                <element signature="e#230#231#0" expanded="false" />
+                <element signature="e#270#271#0" expanded="false" />
+                <element signature="e#335#336#0" expanded="false" />
+                <element signature="e#402#403#0" expanded="false" />
+                <element signature="e#457#458#0" expanded="false" />
+                <element signature="e#507#508#0" expanded="false" />
+                <element signature="e#572#573#0" expanded="false" />
+                <element signature="e#616#617#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -102,8 +103,10 @@
             <state relative-caret-position="289">
               <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding>
-                <element signature="e#572#573#0" expanded="true" />
-                <element signature="e#602#603#0" expanded="true" />
+                <element signature="e#432#433#0" expanded="false" />
+                <element signature="e#463#464#0" expanded="false" />
+                <element signature="e#493#494#0" expanded="false" />
+                <element signature="e#522#523#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -115,6 +118,9 @@
             <state relative-caret-position="493">
               <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
               <folding>
+                <element signature="e#148#162#0" expanded="false" />
+                <element signature="e#215#216#0" expanded="false" />
+                <element signature="e#254#255#0" expanded="false" />
                 <element signature="method#getSimilar#0;class#ExamBank#0" expanded="false" />
                 <element signature="method#getQuestionIndex#0;class#ExamBank#0" expanded="false" />
               </folding>
@@ -181,7 +187,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
-    <option name="width" value="1472" />
+    <option name="width" value="1458" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -209,6 +215,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -300,7 +307,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -748,38 +754,45 @@
       <option name="project" value="LOCAL" />
       <updated>1465154551103</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Small optimizations and comments to increase readability">
+      <created>1465172463321</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1465172463321</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RunnerTest_webdriverRunner - 2016.06.05 at 17h 16m 13s.xml">
+    <history-entry file="RunnerTest_webdriverRunner - 2016.06.06 at 00h 01m 51s.xml">
       <configuration name="RunnerTest.webdriverRunner" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RunnerTest_webdriverRunner - 2016.06.05 at 17h 23m 29s.xml">
+    <history-entry file="RunnerTest_webdriverRunner - 2016.06.06 at 00h 07m 28s.xml">
       <configuration name="RunnerTest.webdriverRunner" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RunnerTest_webdriverRunner - 2016.06.05 at 17h 36m 13s.xml">
+    <history-entry file="RunnerTest_webdriverRunner - 2016.06.06 at 00h 19m 19s.xml">
       <configuration name="RunnerTest.webdriverRunner" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RunnerTest_webdriverRunner - 2016.06.05 at 18h 40m 22s.xml">
+    <history-entry file="RunnerTest_webdriverRunner - 2016.06.06 at 11h 39m 13s.xml">
       <configuration name="RunnerTest.webdriverRunner" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RunnerTest_webdriverRunner - 2016.06.05 at 18h 45m 10s.xml">
+    <history-entry file="RunnerTest_webdriverRunner - 2016.06.06 at 11h 51m 27s.xml">
       <configuration name="RunnerTest.webdriverRunner" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RunnerTest_webdriverRunner - 2016.06.05 at 19h 08m 52s.xml">
+    <history-entry file="RunnerTest_webdriverRunner - 2016.06.06 at 12h 34m 44s.xml">
       <configuration name="RunnerTest.webdriverRunner" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RunnerTest_webdriverRunner - 2016.06.05 at 20h 00m 44s.xml">
+    <history-entry file="RunnerTest_webdriverRunner - 2016.06.06 at 12h 43m 23s.xml">
       <configuration name="RunnerTest.webdriverRunner" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RunnerTest_webdriverRunner - 2016.06.05 at 20h 09m 29s.xml">
+    <history-entry file="RunnerTest_webdriverRunner - 2016.06.06 at 12h 57m 26s.xml">
       <configuration name="RunnerTest.webdriverRunner" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RunnerTest_webdriverRunner - 2016.06.05 at 20h 12m 07s.xml">
+    <history-entry file="RunnerTest_webdriverRunner - 2016.06.06 at 13h 24m 37s.xml">
       <configuration name="RunnerTest.webdriverRunner" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RunnerTest_webdriverRunner - 2016.06.05 at 20h 20m 00s.xml">
+    <history-entry file="RunnerTest_webdriverRunner - 2016.06.06 at 13h 33m 40s.xml">
       <configuration name="RunnerTest.webdriverRunner" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -793,7 +806,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1472" height="1047" extended-state="0" />
+    <frame x="-7" y="0" width="1458" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -804,11 +817,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3238512" sideWeight="0.5027027" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25054705" sideWeight="0.4972973" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24835886" sideWeight="0.4972973" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18413597" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18597998" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -839,7 +852,8 @@
     <MESSAGE value="Fixed issues where the multiple choice selector could not attempt single question quizzes and added a wait method to streamline and standardize wait commands." />
     <MESSAGE value="Fixed a bug where the runner would take an exam in quiz mode" />
     <MESSAGE value="Improved the learning algorithm by searching for the correct answer in the score page and changing the count to reflect the correct choice." />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved the learning algorithm by searching for the correct answer in the score page and changing the count to reflect the correct choice." />
+    <MESSAGE value="Small optimizations and comments to increase readability" />
+    <option name="LAST_COMMIT_MESSAGE" value="Small optimizations and comments to increase readability" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -859,18 +873,16 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#loginToLatestCourse#0;class#RunnerTest#0" expanded="false" />
-            <element signature="method#completeMultipleChoice#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#quizQuestionIsWrong#0;class#RunnerTest#0" expanded="false" />
-            <element signature="method#webdriverRunner#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#completeExam#0;class#RunnerTest#0" expanded="false" />
             <element signature="docComment;method#waitTime#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#waitTime#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#examRunner#0;class#RunnerTest#0" expanded="false" />
             <element signature="docComment;method#improveAnswers#0;class#RunnerTest#0" expanded="false" />
+            <element signature="method#improveAnswers#0;class#RunnerTest#0" expanded="false" />
             <element signature="docComment;method#getPercentage#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#getPercentage#0;class#RunnerTest#0" expanded="false" />
             <element signature="docComment;method#getNumberOfQuestions#0;class#RunnerTest#0" expanded="false" />
-            <element signature="method#getNumberOfQuestions#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#answerIsWrong#0;class#RunnerTest#0" expanded="false" />
             <element signature="docComment;method#getRightCount#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#getRightCount#0;class#RunnerTest#0" expanded="false" />
@@ -885,8 +897,10 @@
         <state relative-caret-position="408">
           <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding>
-            <element signature="e#572#573#0" expanded="true" />
-            <element signature="e#602#603#0" expanded="true" />
+            <element signature="e#432#433#0" expanded="false" />
+            <element signature="e#463#464#0" expanded="false" />
+            <element signature="e#493#494#0" expanded="false" />
+            <element signature="e#522#523#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -904,6 +918,9 @@
         <state relative-caret-position="578">
           <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
           <folding>
+            <element signature="e#148#162#0" expanded="false" />
+            <element signature="e#215#216#0" expanded="false" />
+            <element signature="e#254#255#0" expanded="false" />
             <element signature="method#getSimilar#0;class#ExamBank#0" expanded="false" />
             <element signature="method#getQuestionIndex#0;class#ExamBank#0" expanded="false" />
           </folding>
@@ -933,18 +950,16 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#loginToLatestCourse#0;class#RunnerTest#0" expanded="false" />
-            <element signature="method#completeMultipleChoice#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#quizQuestionIsWrong#0;class#RunnerTest#0" expanded="false" />
-            <element signature="method#webdriverRunner#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#completeExam#0;class#RunnerTest#0" expanded="false" />
             <element signature="docComment;method#waitTime#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#waitTime#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#examRunner#0;class#RunnerTest#0" expanded="false" />
             <element signature="docComment;method#improveAnswers#0;class#RunnerTest#0" expanded="false" />
+            <element signature="method#improveAnswers#0;class#RunnerTest#0" expanded="false" />
             <element signature="docComment;method#getPercentage#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#getPercentage#0;class#RunnerTest#0" expanded="false" />
             <element signature="docComment;method#getNumberOfQuestions#0;class#RunnerTest#0" expanded="false" />
-            <element signature="method#getNumberOfQuestions#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#answerIsWrong#0;class#RunnerTest#0" expanded="false" />
             <element signature="docComment;method#getRightCount#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#getRightCount#0;class#RunnerTest#0" expanded="false" />
@@ -993,18 +1008,16 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#loginToLatestCourse#0;class#RunnerTest#0" expanded="false" />
-            <element signature="method#completeMultipleChoice#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#quizQuestionIsWrong#0;class#RunnerTest#0" expanded="false" />
-            <element signature="method#webdriverRunner#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#completeExam#0;class#RunnerTest#0" expanded="false" />
             <element signature="docComment;method#waitTime#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#waitTime#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#examRunner#0;class#RunnerTest#0" expanded="false" />
             <element signature="docComment;method#improveAnswers#0;class#RunnerTest#0" expanded="false" />
+            <element signature="method#improveAnswers#0;class#RunnerTest#0" expanded="false" />
             <element signature="docComment;method#getPercentage#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#getPercentage#0;class#RunnerTest#0" expanded="false" />
             <element signature="docComment;method#getNumberOfQuestions#0;class#RunnerTest#0" expanded="false" />
-            <element signature="method#getNumberOfQuestions#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#answerIsWrong#0;class#RunnerTest#0" expanded="false" />
             <element signature="docComment;method#getRightCount#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#getRightCount#0;class#RunnerTest#0" expanded="false" />
@@ -1053,18 +1066,16 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#loginToLatestCourse#0;class#RunnerTest#0" expanded="false" />
-            <element signature="method#completeMultipleChoice#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#quizQuestionIsWrong#0;class#RunnerTest#0" expanded="false" />
-            <element signature="method#webdriverRunner#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#completeExam#0;class#RunnerTest#0" expanded="false" />
             <element signature="docComment;method#waitTime#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#waitTime#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#examRunner#0;class#RunnerTest#0" expanded="false" />
             <element signature="docComment;method#improveAnswers#0;class#RunnerTest#0" expanded="false" />
+            <element signature="method#improveAnswers#0;class#RunnerTest#0" expanded="false" />
             <element signature="docComment;method#getPercentage#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#getPercentage#0;class#RunnerTest#0" expanded="false" />
             <element signature="docComment;method#getNumberOfQuestions#0;class#RunnerTest#0" expanded="false" />
-            <element signature="method#getNumberOfQuestions#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#answerIsWrong#0;class#RunnerTest#0" expanded="false" />
             <element signature="docComment;method#getRightCount#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#getRightCount#0;class#RunnerTest#0" expanded="false" />
@@ -1113,18 +1124,16 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#loginToLatestCourse#0;class#RunnerTest#0" expanded="false" />
-            <element signature="method#completeMultipleChoice#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#quizQuestionIsWrong#0;class#RunnerTest#0" expanded="false" />
-            <element signature="method#webdriverRunner#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#completeExam#0;class#RunnerTest#0" expanded="false" />
             <element signature="docComment;method#waitTime#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#waitTime#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#examRunner#0;class#RunnerTest#0" expanded="false" />
             <element signature="docComment;method#improveAnswers#0;class#RunnerTest#0" expanded="false" />
+            <element signature="method#improveAnswers#0;class#RunnerTest#0" expanded="false" />
             <element signature="docComment;method#getPercentage#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#getPercentage#0;class#RunnerTest#0" expanded="false" />
             <element signature="docComment;method#getNumberOfQuestions#0;class#RunnerTest#0" expanded="false" />
-            <element signature="method#getNumberOfQuestions#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#answerIsWrong#0;class#RunnerTest#0" expanded="false" />
             <element signature="docComment;method#getRightCount#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#getRightCount#0;class#RunnerTest#0" expanded="false" />
@@ -1173,18 +1182,16 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#loginToLatestCourse#0;class#RunnerTest#0" expanded="false" />
-            <element signature="method#completeMultipleChoice#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#quizQuestionIsWrong#0;class#RunnerTest#0" expanded="false" />
-            <element signature="method#webdriverRunner#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#completeExam#0;class#RunnerTest#0" expanded="false" />
             <element signature="docComment;method#waitTime#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#waitTime#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#examRunner#0;class#RunnerTest#0" expanded="false" />
             <element signature="docComment;method#improveAnswers#0;class#RunnerTest#0" expanded="false" />
+            <element signature="method#improveAnswers#0;class#RunnerTest#0" expanded="false" />
             <element signature="docComment;method#getPercentage#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#getPercentage#0;class#RunnerTest#0" expanded="false" />
             <element signature="docComment;method#getNumberOfQuestions#0;class#RunnerTest#0" expanded="false" />
-            <element signature="method#getNumberOfQuestions#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#answerIsWrong#0;class#RunnerTest#0" expanded="false" />
             <element signature="docComment;method#getRightCount#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#getRightCount#0;class#RunnerTest#0" expanded="false" />
@@ -1233,18 +1240,16 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#loginToLatestCourse#0;class#RunnerTest#0" expanded="false" />
-            <element signature="method#completeMultipleChoice#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#quizQuestionIsWrong#0;class#RunnerTest#0" expanded="false" />
-            <element signature="method#webdriverRunner#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#completeExam#0;class#RunnerTest#0" expanded="false" />
             <element signature="docComment;method#waitTime#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#waitTime#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#examRunner#0;class#RunnerTest#0" expanded="false" />
             <element signature="docComment;method#improveAnswers#0;class#RunnerTest#0" expanded="false" />
+            <element signature="method#improveAnswers#0;class#RunnerTest#0" expanded="false" />
             <element signature="docComment;method#getPercentage#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#getPercentage#0;class#RunnerTest#0" expanded="false" />
             <element signature="docComment;method#getNumberOfQuestions#0;class#RunnerTest#0" expanded="false" />
-            <element signature="method#getNumberOfQuestions#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#answerIsWrong#0;class#RunnerTest#0" expanded="false" />
             <element signature="docComment;method#getRightCount#0;class#RunnerTest#0" expanded="false" />
             <element signature="method#getRightCount#0;class#RunnerTest#0" expanded="false" />
@@ -1295,13 +1300,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/ddavison/conductor/2.2.4/conductor-2.2.4.jar!/io/ddavison/conductor/Locomotive.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="290" column="0" selection-start-line="290" selection-start-column="0" selection-end-line="290" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/selenium-gire.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1313,14 +1311,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -1340,14 +1330,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/ddavison/conductor/2.2.4/conductor-2.2.4.jar!/io/ddavison/conductor/Locomotive.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="308" column="0" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/nedellis/selenium/RunnerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="296" column="0" selection-start-line="296" selection-start-column="0" selection-end-line="296" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#loginToLatestCourse#0;class#RunnerTest#0" expanded="false" />
+            <element signature="method#quizQuestionIsWrong#0;class#RunnerTest#0" expanded="false" />
+            <element signature="method#completeExam#0;class#RunnerTest#0" expanded="false" />
+            <element signature="docComment;method#waitTime#0;class#RunnerTest#0" expanded="false" />
+            <element signature="method#waitTime#0;class#RunnerTest#0" expanded="false" />
+            <element signature="method#examRunner#0;class#RunnerTest#0" expanded="false" />
+            <element signature="docComment;method#improveAnswers#0;class#RunnerTest#0" expanded="false" />
+            <element signature="method#improveAnswers#0;class#RunnerTest#0" expanded="false" />
+            <element signature="docComment;method#getPercentage#0;class#RunnerTest#0" expanded="false" />
+            <element signature="method#getPercentage#0;class#RunnerTest#0" expanded="false" />
+            <element signature="docComment;method#getNumberOfQuestions#0;class#RunnerTest#0" expanded="false" />
+            <element signature="method#answerIsWrong#0;class#RunnerTest#0" expanded="false" />
+            <element signature="docComment;method#getRightCount#0;class#RunnerTest#0" expanded="false" />
+            <element signature="method#getRightCount#0;class#RunnerTest#0" expanded="false" />
+            <element signature="docComment;method#getQuestionText#0;class#RunnerTest#0" expanded="false" />
+            <element signature="method#getQuestionText#0;class#RunnerTest#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/nedellis/selenium/selectQuestion.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
+        <state relative-caret-position="289">
           <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
           <folding>
-            <element signature="e#165#173#0" expanded="true" />
-            <element signature="e#416#417#0" expanded="true" />
-            <element signature="e#460#461#0" expanded="true" />
+            <element signature="e#227#228#0" expanded="false" />
+            <element signature="e#252#253#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1357,18 +1387,14 @@
         <state relative-caret-position="119">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
-            <element signature="e#151#167#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nedellis/selenium/ExamBank.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
-          <folding>
-            <element signature="method#getSimilar#0;class#ExamBank#0" expanded="false" />
-            <element signature="method#getQuestionIndex#0;class#ExamBank#0" expanded="false" />
+            <element signature="e#230#231#0" expanded="false" />
+            <element signature="e#270#271#0" expanded="false" />
+            <element signature="e#335#336#0" expanded="false" />
+            <element signature="e#402#403#0" expanded="false" />
+            <element signature="e#457#458#0" expanded="false" />
+            <element signature="e#507#508#0" expanded="false" />
+            <element signature="e#572#573#0" expanded="false" />
+            <element signature="e#616#617#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1378,8 +1404,24 @@
         <state relative-caret-position="289">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
-            <element signature="e#572#573#0" expanded="true" />
-            <element signature="e#602#603#0" expanded="true" />
+            <element signature="e#432#433#0" expanded="false" />
+            <element signature="e#463#464#0" expanded="false" />
+            <element signature="e#493#494#0" expanded="false" />
+            <element signature="e#522#523#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nedellis/selenium/ExamBank.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+          <folding>
+            <element signature="e#148#162#0" expanded="false" />
+            <element signature="e#215#216#0" expanded="false" />
+            <element signature="e#254#255#0" expanded="false" />
+            <element signature="method#getSimilar#0;class#ExamBank#0" expanded="false" />
+            <element signature="method#getQuestionIndex#0;class#ExamBank#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1389,34 +1431,6 @@
         <state relative-caret-position="153">
           <caret line="9" column="40" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="40" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/nedellis/selenium/RunnerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="38" column="36" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#loginToLatestCourse#0;class#RunnerTest#0" expanded="false" />
-            <element signature="method#completeMultipleChoice#0;class#RunnerTest#0" expanded="false" />
-            <element signature="method#quizQuestionIsWrong#0;class#RunnerTest#0" expanded="false" />
-            <element signature="method#webdriverRunner#0;class#RunnerTest#0" expanded="false" />
-            <element signature="method#completeExam#0;class#RunnerTest#0" expanded="false" />
-            <element signature="docComment;method#waitTime#0;class#RunnerTest#0" expanded="false" />
-            <element signature="method#waitTime#0;class#RunnerTest#0" expanded="false" />
-            <element signature="method#examRunner#0;class#RunnerTest#0" expanded="false" />
-            <element signature="docComment;method#improveAnswers#0;class#RunnerTest#0" expanded="false" />
-            <element signature="docComment;method#getPercentage#0;class#RunnerTest#0" expanded="false" />
-            <element signature="method#getPercentage#0;class#RunnerTest#0" expanded="false" />
-            <element signature="docComment;method#getNumberOfQuestions#0;class#RunnerTest#0" expanded="false" />
-            <element signature="method#getNumberOfQuestions#0;class#RunnerTest#0" expanded="false" />
-            <element signature="method#answerIsWrong#0;class#RunnerTest#0" expanded="false" />
-            <element signature="docComment;method#getRightCount#0;class#RunnerTest#0" expanded="false" />
-            <element signature="method#getRightCount#0;class#RunnerTest#0" expanded="false" />
-            <element signature="docComment;method#getQuestionText#0;class#RunnerTest#0" expanded="false" />
-            <element signature="method#getQuestionText#0;class#RunnerTest#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
