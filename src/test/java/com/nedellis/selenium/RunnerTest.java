@@ -34,7 +34,9 @@ public class RunnerTest extends Locomotive {
     private static final int scoreThreshold = 70;
 
     /* Integer with the base waiting time in seconds */
-    private static final int baseWait = 50;
+    private static final int baseWait = 60;
+
+    private static int examCount = 1;
 
     private void loginToLatestCourse() {
 
@@ -289,8 +291,6 @@ public class RunnerTest extends Locomotive {
 
         loginToLatestCourse();
 
-        int examCount = 2;
-
         waitTime(2);
 
         /* While loop designed to complete an entire course while the link still exists */
@@ -304,14 +304,14 @@ public class RunnerTest extends Locomotive {
             }
 
             /* Contingency plan for a reading exam */
-            if (isPresent((MyEasyTrack.getExamLink(examCount)))) {
+            else if (isPresent((MyEasyTrack.getExamLink(examCount)))) {
                 click(MyEasyTrack.getExamLink(examCount));
                 completeExam();
                 examCount++;
             }
 
             /* In case the starting page is not a course, click the latest link */
-            if (isPresent(MyEasyTrack.LOC_LNK_LATESTCOURSE)) {
+            else if (isPresent(MyEasyTrack.LOC_LNK_LATESTCOURSE)) {
                 click(MyEasyTrack.LOC_LNK_LATESTCOURSE);
             }
 
@@ -519,7 +519,7 @@ public class RunnerTest extends Locomotive {
 
             /* If the count goes over the maximum amount of answers is, print this out for future debugging */
             if (count > 4 && hasNotChanged) {
-                System.out.println("Couldn't find the answer because the count was too high, check your code... ");
+                System.out.println("Answer already correct, no change required.");
             }
 
             System.out.println();
